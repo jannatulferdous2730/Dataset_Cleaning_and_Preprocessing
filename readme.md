@@ -147,3 +147,22 @@ for col in features:
 🔝 [Back to Top](#-table-of-contents)
 
 ---
+
+
+### 6️⃣ Simulated & Treated Missing Values
+
+Simulated missing values in:
+
+- SepalLengthCm (numeric)  
+- Species (categorical)  
+
+Imputed:
+
+- Median for numeric columns  
+- Mode for categorical columns  
+
+```python
+iris['SepalLengthCm'].fillna(iris['SepalLengthCm'].median(), inplace=True)
+iris['Species'].fillna(iris['Species'].mode()[0], inplace=True)
+```
+
