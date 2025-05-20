@@ -165,4 +165,51 @@ Imputed:
 iris['SepalLengthCm'].fillna(iris['SepalLengthCm'].median(), inplace=True)
 iris['Species'].fillna(iris['Species'].mode()[0], inplace=True)
 ```
+🔝 [Back to Top](#-table-of-contents)
+
+---
+
+### 7️⃣ Outlier Detection (IQR & Z-score)
+
+**IQR Method:**
+
+- Used 1.5×IQR rule to detect outliers
+
+**Z-score Method:**
+
+- Detected values with absolute Z > 3
+
+Both approaches were used side by side for comparison.
+
+🔝 [Back to Top](#-table-of-contents)
+
+---
+
+### 8️⃣ Z-score Normalization
+
+Applied Z-score normalization to numerical features and created new columns:
+
+```python
+iris[col + '_z'] = zscore(iris[col])
+```
+
+This ensures all features have 0 mean and 1 standard deviation.
+
+🔝 [Back to Top](#-table-of-contents)
+
+---
+
+### 9️⃣ Outlier Treatment (Capping)
+
+Capped values using IQR method:
+
+```python
+iris[col + '_capped'] = iris[col].clip(lower, upper)
+```
+
+This preserves outliers in a controlled range instead of dropping them.
+
+🔝 [Back to Top](#-table-of-contents)
+
+---
 
