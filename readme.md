@@ -19,6 +19,8 @@ A complete, professional-level preprocessing and visualization notebook using th
   - [7️⃣ Outlier Detection (IQR & Z-score)](#7️⃣-outlier-detection-iqr--z-score)
   - [8️⃣ Z-score Normalization](#8️⃣-z-score-normalization)
   - [9️⃣ Outlier Treatment (Capping)](#9️⃣-outlier-treatment-capping)
+- [📚 Key Learnings](#-key-learnings)
+- [🚀 How to Run](#-how-to-run)
 
 ---
 
